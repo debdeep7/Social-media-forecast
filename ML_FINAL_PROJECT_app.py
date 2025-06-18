@@ -13,7 +13,9 @@ import matplotlib.pyplot as plt
 # ---------- Data Preprocessing ----------
 @st.cache_data
 def load_data():
-    df = pd.read_excel("C:\\Users\\debmishra\\Downloads\\SOPRA STERIA DATA.xlsx")
+    df = pd.read_excel("SOPRA STERIA DATA.xlsx")
+
+    #df = pd.read_excel("C:\\Users\\debmishra\\Downloads\\SOPRA STERIA DATA.xlsx")
     df['Publish Time'] = pd.to_datetime(df['Publish Time'])
     df = df[df['Total Impressions'] > 0].copy()
     
